@@ -2,11 +2,14 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\Traits\TruncateTable;
 
 class PostSeeder extends Seeder
 {
+    use TruncateTable;
     /**
      * Run the database seeds.
      *
@@ -14,6 +17,8 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $this->truncate('posts');
+        Post::factory(3)->create();
+        $this->enableForeignKeyChecks();
     }
 }
