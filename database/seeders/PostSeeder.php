@@ -18,7 +18,12 @@ class PostSeeder extends Seeder
     public function run()
     {
         $this->truncate('posts');
-        Post::factory(3)->create();
+        Post::factory(3)
+        // ->state([
+        //     'title' => 'some title'
+        // ])
+        // ->untitled()
+        ->create();
         $this->enableForeignKeyChecks();
     }
 }
