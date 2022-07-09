@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         $this->truncate('users');
-        User::factory(10)->create();
+        User::factory(3)->create();
         $this->enableForeignKeyChecks();
     }
 }
