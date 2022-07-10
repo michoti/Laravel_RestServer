@@ -13,7 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return 1;
     }
 
     /**
@@ -34,7 +34,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = 'post';
+        return $data;
     }
 
     /**

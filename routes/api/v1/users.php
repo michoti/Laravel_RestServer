@@ -6,8 +6,8 @@ use App\Http\Controllers\UserController;
 
 
 
-Route::middleware('auth')
-    ->name('users.')
+Route::
+    name('users.')
     ->group(function (){
 
     Route::get('/users', [UserController::class, 'index'])->name('index')->withoutMiddleware('auth');
@@ -16,9 +16,9 @@ Route::middleware('auth')
 
     Route::post('/users', [UserController::class, 'store'])->name('store');
 
-    Route::patch('/users', [UserController::class, 'update'])->name('update');
+    Route::patch('/users/{user}', [UserController::class, 'update'])->name('update');
 
-    Route::delete('/users', [UserController::class, 'delete'])->name('delete');
+    Route::delete('/users/{user}', [UserController::class, 'delete'])->name('delete');
 
    });
 
