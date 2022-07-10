@@ -13,7 +13,7 @@ Route::
 
     Route::get('/comments/{comment}', [CommentController::class, 'show'])->name('show')->whereNumber('comment');
 
-    Route::comment('/comments', [CommentController::class, 'store'])->name('store');
+    Route::post('/comments', [CommentController::class, 'store'])->name('store');
 
     Route::patch('/comments/{comment}', [CommentController::class, 'update'])->name('update');
 
