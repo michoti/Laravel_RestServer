@@ -16,9 +16,9 @@ Route::
 
     Route::post('/users', [UserController::class, 'store'])->name('store');
 
-    Route::patch('/users/{user}', [UserController::class, 'update'])->name('update');
+    Route::put('/users/{user}', [UserController::class, 'update'])->name('update');
 
-    Route::delete('/users/{user}', [UserController::class, 'delete'])->name('delete');
+    Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('delete');
 
    });
 

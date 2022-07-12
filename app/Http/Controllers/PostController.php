@@ -86,7 +86,7 @@ class PostController extends Controller
         }
 
         return new JsonResponse([
-            'data' => $post
+            'data' => 'updated'
         ]);
     }
 

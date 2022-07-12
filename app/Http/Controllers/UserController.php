@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,7 +15,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        return 1;
+        $user = User::query()->get();
+
+        return new JsonResponse([
+            'data' => $user
+        ]);
     }
 
     /**
@@ -34,8 +40,15 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $data = 'post';
-        return $data;
+        $created = User::query()->create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+
+        return new JsonResponse([
+            'user' => $created,
+        ]);
     }
 
     /**
@@ -46,7 +59,11 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+
+        return new JsonResponse([
+            'user' => $user,
+        ]);
     }
 
     /**
@@ -69,7 +86,24 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $person = User::find($id);
+        $updated = $person->update([
+            'name' => $request->name ?? $person->name,
+            'email' => $request->email ?? $person->email,
+        ]);
+
+        if(!$updated)
+        {
+            return new JsonResponse([
+                'errors' => [
+                    'Failed to update user'
+                ]
+                ], 400);
+        }
+
+        return new JsonResponse([
+            'data' => $updated
+        ]);
     }
 
     /**
@@ -80,6 +114,19 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $deleted = User::find($id)->forceDelete();
+
+        if(!$deleted)
+        {
+            return new JsonResponse([
+                'errors' => [
+                    'Failed to delete user'
+                ]
+                ], 400);
+        }
+
+        return new JsonResponse([
+            'data' => 'delete successful'
+        ]);
     }
 }
