@@ -1,11 +1,13 @@
 <?php 
 
 namespace App\Repositories;
+
+use App\Exceptions\GeneralJsonException;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 
 
-class PostRepository 
+class PostRepository extends BaseRepository
 {
     public function create(array $attributes)
     {
@@ -17,6 +19,8 @@ class PostRepository
                 'body' => data_get($attributes, 'body', 'body'),
             ]);
 
+            throw_if(!$created, GeneralJsonException::class, 'Post creation unsuccessful', 422);
+
             $created->users()->sync(data_get($attributes, 'user_ids'));
             
             return $created;
@@ -24,7 +28,7 @@ class PostRepository
         
     }
 
-    public function update(Post $post, array $attributes)
+    public function update($post, array $attributes)
     {
         return DB::transaction(function () use($post, $attributes) {
             $updated = $post->update([
@@ -32,10 +36,7 @@ class PostRepository
                 'body' => data_get($attributes, 'body', $post->body),
             ]);
 
-            if(!$updated)
-            {
-                throw new \Exception('Failed to update post');
-            }
+            throw_if(!$updated, GeneralJsonException::class, 'Post not updated!', 422);
 
             if($userIds = data_get($attributes, 'user_ids'))
             {
@@ -47,19 +48,30 @@ class PostRepository
         
     }
 
-    public function forceDelete(Post $post)
+    public function forceDelete($post)
     {
         DB::transaction(function() use($post) {
             $deleted = $post->forceDelete();
 
-            if(!$deleted)
-            {
-                throw new \Exception('Failed to delete post');
-            }
+            throw_if(!$deleted, GeneralJsonException::class, 'Post NOT deleted!', 422);
 
             return $deleted;
         });
 
         
     }
+    
 }
+
+
+
+
+
+
+/**
+ * Exception helper functions
+ * 
+ * report(Exception::class)
+ * abort()
+ * 
+ */

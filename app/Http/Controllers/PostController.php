@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\GeneralJsonException;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
@@ -16,6 +17,8 @@ class PostController extends Controller
 
     public function index(Request $request)
     {
+        throw new GeneralJsonException('error#index', 422);
+        
         $pageSize = $request->page_size ?? 20;
         $posts = Post::query()->paginate($pageSize);
 
@@ -57,7 +60,7 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \App\Http\Resources\PostResource
      */
-    public function update(UpdatePostRequest $request, Post $post, PostRepository $repository)
+    public function update(Request $request, Post $post, PostRepository $repository)
     {
         $post = $repository->update($post, $request->only([
             'title',
