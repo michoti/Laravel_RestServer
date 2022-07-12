@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use App\Http\Resources\PostResource;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -14,13 +17,16 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::query()->get();
+        $pageSize = $request->page_size ?? 20;
+        $posts = Post::query()->paginate($pageSize);
 
-        return new JsonResponse([
-            'data' => $posts
-        ]);
+        return PostResource::collection($posts);
+
+        // return new JsonResponse([
+        //     'data' => $posts
+        // ]);
 
         // return $posts;
     }
@@ -31,16 +37,25 @@ class PostController extends Controller
      * @param  \App\Http\Requests\StorePostRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostRequest $request)
+    public function store(Request $request)
     {
-        $created = Post::query()->create([
-            'title' => $request->title,
-            'body' => $request->body,
-        ]);
+        $created = DB::transaction(function() use($request) {
 
-        return new JsonResponse([
-            'data' => $created
-        ]);
+            $created = Post::query()->create([
+                'title' => $request->title,
+                'body' => $request->body,
+            ]);
+
+            $created->users()->sync($request->user_ids);
+            
+            return $created;
+        });
+
+        // return new JsonResponse([
+        //     'data' => $created
+        // ]);
+
+        return new PostResource($created);
     }
 
     /**
@@ -51,9 +66,11 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return new JsonResponse([
-            'data' => $post
-        ]);
+        return new PostResource($post);
+
+        // return new JsonResponse([
+        //     'data' => $post
+        // ]);
 
         // return response()->json([
         //     'data' => $post
@@ -85,9 +102,11 @@ class PostController extends Controller
                 ], 400);
         }
 
-        return new JsonResponse([
-            'data' => 'updated'
-        ]);
+        // return new JsonResponse([
+        //     'data' => 'updated'
+        // ]);
+
+        return new PostResource($post);
     }
 
     /**

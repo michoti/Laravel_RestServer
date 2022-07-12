@@ -15,6 +15,10 @@ class Post extends Model
         'body' => 'array'
     ];
 
+    // protected $appends = [
+    //     'Titleuppercase',
+    // ];
+
     // Accessor 
     public function getTitleUppercaseAttribute()
     {

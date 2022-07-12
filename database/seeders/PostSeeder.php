@@ -21,7 +21,7 @@ class PostSeeder extends Seeder
     public function run()
     {
         $this->truncate('posts');
-        $posts = Post::factory(3)
+        $posts = Post::factory(15)
         // ->has(Comment::factory(3), 'comments')
         // ->state([
         //     'title' => 'some title'
