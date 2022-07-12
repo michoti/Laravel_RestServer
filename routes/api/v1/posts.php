@@ -15,9 +15,9 @@ Route::
 
     Route::post('/posts', [PostController::class, 'store'])->name('store');
 
-    Route::patch('/posts/{post}', [PostController::class, 'update'])->name('update');
+    Route::put('/posts/{post}', [PostController::class, 'update'])->name('update');
 
-    Route::delete('/posts/{post}', [PostController::class, 'delete'])->name('delete');
+    Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('delete');
 
    });
 
