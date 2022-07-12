@@ -9,7 +9,7 @@ Route::
     name('posts.')
     ->group(function (){
 
-    Route::get('/posts', [PostController::class, 'index'])->name('index')->withoutMiddleware('auth');
+    Route::get('/posts', [PostController::class, 'index'])->name('index');
 
     Route::get('/posts/{post}', [PostController::class, 'show'])->name('show')->whereNumber('post');
 
