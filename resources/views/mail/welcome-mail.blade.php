@@ -1,0 +1,1 @@
+<h1>Welcome Mail boilerplate rendering</h1>

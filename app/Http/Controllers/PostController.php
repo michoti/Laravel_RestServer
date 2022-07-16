@@ -17,9 +17,10 @@ class PostController extends Controller
 
     public function index(Request $request)
     {
-        throw new GeneralJsonException('error#index', 422);
+        // throw new GeneralJsonException('error#index', 422);
         
         $pageSize = $request->page_size ?? 20;
+
         $posts = Post::query()->paginate($pageSize);
 
         return PostResource::collection($posts);

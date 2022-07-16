@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+if(App::environment('local'))
+{
+    Route::get('/play', function (){
+        // return view('mail.welcome-mail');
+
+        return (new WelcomeMail())->render();
+    });
+}
