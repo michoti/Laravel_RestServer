@@ -24,6 +24,11 @@ if(App::environment('local'))
     Route::get('/play', function (){
         // return view('mail.welcome-mail');
 
-        return (new WelcomeMail())->render();
+        $user = \App\Models\User::factory()->make();
+
+        \Illuminate\Support\Facades\Mail::to($user)
+        ->send(new WelcomeMail($user));
+
+        return null;
     });
 }
