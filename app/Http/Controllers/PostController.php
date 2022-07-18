@@ -32,7 +32,7 @@ class PostController extends Controller
      * @param  \App\Http\Requests\StorePostRequest  $request
      * @return \App\Http\Resources\PostResource
      */
-    public function store(Request $request, PostRepository $repository)
+    public function store(StorePostRequest $request, PostRepository $repository)
     {
         $created = $repository->create($request->only([
             'title',
