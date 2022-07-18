@@ -25,7 +25,9 @@ class UserRepository extends BaseRepository
             ]);
 
             throw_if(!$created, GeneralJsonException::class, 'Failed to create model.');
+
             event(new UserCreatedEvent($created));
+
             return $created;
         });
     }
@@ -59,7 +61,9 @@ class UserRepository extends BaseRepository
             $deleted = $user->forceDelete();
 
             throw_if(!$deleted, GeneralJsonException::class, 'Cannot delete user.');
+
             event(new UserDeletedEvent($user));
+            
             return $deleted;
         });
 
