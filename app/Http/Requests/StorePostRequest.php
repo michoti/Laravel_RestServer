@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\IntegerArray;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StorePostRequest extends FormRequest
@@ -26,7 +27,29 @@ class StorePostRequest extends FormRequest
         return [
             'title' => 'required|string|min:5',
             'body' => 'nullable|string|required',
-            'user_ids' => 'array|required',
+            'user_ids' => [
+                'array',
+                'required',
+                new IntegerArray()
+                // function($attr, $value, $fail){
+                //     $integerOnly = collect($value)->every(fn ($element) => is_int($element));
+
+                //     if(!$integerOnly){
+                //         $fail($attr. ' can only be integers');
+                //     }
+
+                // }
+            ],
         ];
+    }
+
+
+    public function messages()
+    {
+        return [
+            'body.required' => 'please enter a body value',
+            'title.string' => 'title needs to be a string',
+        ];
+        
     }
 }
