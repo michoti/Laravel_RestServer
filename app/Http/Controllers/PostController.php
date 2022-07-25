@@ -34,6 +34,11 @@ class PostController extends Controller
      * 
      * @queryParam page_size int size per page. Default is '20'. Example 20.
      * @queryParam ?page= int page to view. Example 1.
+     * 
+     * @apiResourceCollection \App\Http\Resources\PostResource     
+     * @apiResourceModel \App\Models\Post
+     * @return ResourceCollection
+     * 
      */
 
     public function index(Request $request)
