@@ -89,21 +89,6 @@
                                     <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-v1-users--user_id-">
                         <a href="#endpoints-DELETEapi-v1-users--user_id-">Remove the specified resource from storage.</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-posts">
-                        <a href="#endpoints-GETapi-v1-posts">GET api/v1/posts</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-posts--id-">
-                        <a href="#endpoints-GETapi-v1-posts--id-">Display the specified resource.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-v1-posts">
-                        <a href="#endpoints-POSTapi-v1-posts">Store a newly created resource in storage.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-PUTapi-v1-posts--id-">
-                        <a href="#endpoints-PUTapi-v1-posts--id-">Update the specified resource in storage.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-v1-posts--post_id-">
-                        <a href="#endpoints-DELETEapi-v1-posts--post_id-">Remove the specified resource from storage.</a>
-                    </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-comments">
                         <a href="#endpoints-GETapi-v1-comments">Display a listing of the resource.</a>
                     </li>
@@ -118,6 +103,28 @@
                     </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-user">
                         <a href="#endpoints-GETapi-user">GET api/user</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-3" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="posts-management">
+                    <a href="#posts-management">Posts Management</a>
+                </li>
+                                    <ul id="tocify-subheader-posts-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="posts-management-GETapi-v1-posts">
+                        <a href="#posts-management-GETapi-v1-posts">Display a list of posts</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="posts-management-GETapi-v1-posts--id-">
+                        <a href="#posts-management-GETapi-v1-posts--id-">Display the specified resource.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="posts-management-POSTapi-v1-posts">
+                        <a href="#posts-management-POSTapi-v1-posts">Store a newly created resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="posts-management-PUTapi-v1-posts--id-">
+                        <a href="#posts-management-PUTapi-v1-posts--id-">Update the specified resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="posts-management-DELETEapi-v1-posts--post_id-">
+                        <a href="#posts-management-DELETEapi-v1-posts--post_id-">Remove the specified resource from storage.</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -683,702 +690,6 @@ fetch(url, {
             </p>
                     </form>
 
-            <h2 id="endpoints-GETapi-v1-posts">GET api/v1/posts</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-v1-posts">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://REST_APP.test/api/v1/posts" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://REST_APP.test/api/v1/posts"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-v1-posts">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;title&quot;: &quot;eligendi&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 2,
-            &quot;title&quot;: &quot;voluptate&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 3,
-            &quot;title&quot;: &quot;nihil&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;title&quot;: &quot;ut&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 5,
-            &quot;title&quot;: &quot;atque&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 6,
-            &quot;title&quot;: &quot;non&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 7,
-            &quot;title&quot;: &quot;transaction title update test&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T13:33:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 8,
-            &quot;title&quot;: &quot;labore&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 9,
-            &quot;title&quot;: &quot;sequi&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 10,
-            &quot;title&quot;: &quot;quia&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 11,
-            &quot;title&quot;: &quot;ipsa&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 12,
-            &quot;title&quot;: &quot;voluptas&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 13,
-            &quot;title&quot;: &quot;laboriosam&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 14,
-            &quot;title&quot;: &quot;pariatur&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T10:42:39.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 16,
-            &quot;title&quot;: &quot;transaction title two&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T11:13:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T11:13:25.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 17,
-            &quot;title&quot;: &quot;transaction title two&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T11:14:15.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T11:14:15.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 18,
-            &quot;title&quot;: &quot;transaction title two&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T11:17:59.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T11:17:59.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 19,
-            &quot;title&quot;: &quot;transaction title two&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T11:20:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T11:20:13.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 20,
-            &quot;title&quot;: &quot;transaction title two&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T11:20:39.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T11:20:39.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 21,
-            &quot;title&quot;: &quot;transaction title three&quot;,
-            &quot;body&quot;: [],
-            &quot;created_at&quot;: &quot;2022-07-12T11:24:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-07-12T11:24:40.000000Z&quot;
-        }
-    ],
-    &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://rest_app.test/api/v1/posts?page=1&quot;,
-        &quot;last&quot;: &quot;http://rest_app.test/api/v1/posts?page=2&quot;,
-        &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://rest_app.test/api/v1/posts?page=2&quot;
-    },
-    &quot;meta&quot;: {
-        &quot;current_page&quot;: 1,
-        &quot;from&quot;: 1,
-        &quot;last_page&quot;: 2,
-        &quot;links&quot;: [
-            {
-                &quot;url&quot;: null,
-                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=1&quot;,
-                &quot;label&quot;: &quot;1&quot;,
-                &quot;active&quot;: true
-            },
-            {
-                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=2&quot;,
-                &quot;label&quot;: &quot;2&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=2&quot;,
-                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
-                &quot;active&quot;: false
-            }
-        ],
-        &quot;path&quot;: &quot;http://rest_app.test/api/v1/posts&quot;,
-        &quot;per_page&quot;: 20,
-        &quot;to&quot;: 20,
-        &quot;total&quot;: 40
-    }
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-v1-posts" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-v1-posts"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-v1-posts"></code></pre>
-</span>
-<span id="execution-error-GETapi-v1-posts" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-v1-posts"></code></pre>
-</span>
-<form id="form-GETapi-v1-posts" data-method="GET"
-      data-path="api/v1/posts"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-posts', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-v1-posts"
-                    onclick="tryItOut('GETapi-v1-posts');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-v1-posts"
-                    onclick="cancelTryOut('GETapi-v1-posts');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-v1-posts" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/v1/posts</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-v1-posts--id-">Display the specified resource.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-v1-posts--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://REST_APP.test/api/v1/posts/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://REST_APP.test/api/v1/posts/1"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-v1-posts--id-">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;title&quot;: &quot;eligendi&quot;,
-        &quot;body&quot;: [],
-        &quot;created_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;
-    }
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-v1-posts--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-v1-posts--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-v1-posts--id-"></code></pre>
-</span>
-<span id="execution-error-GETapi-v1-posts--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-v1-posts--id-"></code></pre>
-</span>
-<form id="form-GETapi-v1-posts--id-" data-method="GET"
-      data-path="api/v1/posts/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-posts--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-v1-posts--id-"
-                    onclick="tryItOut('GETapi-v1-posts--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-v1-posts--id-"
-                    onclick="cancelTryOut('GETapi-v1-posts--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-v1-posts--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/v1/posts/{id}</code></b>
-        </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="GETapi-v1-posts--id-"
-               value="1"
-               data-component="url" hidden>
-    <br>
-<p>The ID of the post.</p>
-            </p>
-                    </form>
-
-            <h2 id="endpoints-POSTapi-v1-posts">Store a newly created resource in storage.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-v1-posts">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://REST_APP.test/api/v1/posts" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"title\": \"s\",
-    \"body\": \"itaque\",
-    \"user_ids\": [
-        \"eaque\"
-    ]
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://REST_APP.test/api/v1/posts"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "title": "s",
-    "body": "itaque",
-    "user_ids": [
-        "eaque"
-    ]
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-v1-posts">
-</span>
-<span id="execution-results-POSTapi-v1-posts" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-v1-posts"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-v1-posts"></code></pre>
-</span>
-<span id="execution-error-POSTapi-v1-posts" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-v1-posts"></code></pre>
-</span>
-<form id="form-POSTapi-v1-posts" data-method="POST"
-      data-path="api/v1/posts"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-posts', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-v1-posts"
-                    onclick="tryItOut('POSTapi-v1-posts');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-v1-posts"
-                    onclick="cancelTryOut('POSTapi-v1-posts');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-v1-posts" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/v1/posts</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>title</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="title"
-               data-endpoint="POSTapi-v1-posts"
-               value="s"
-               data-component="body" hidden>
-    <br>
-<p>Must be at least 5 characters.</p>
-        </p>
-                <p>
-            <b><code>body</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="body"
-               data-endpoint="POSTapi-v1-posts"
-               value="itaque"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-                <p>
-            <b><code>user_ids</code></b>&nbsp;&nbsp;<small>string[]</small>  &nbsp;
-                <input type="text"
-               name="user_ids[0]"
-               data-endpoint="POSTapi-v1-posts"
-               data-component="body" hidden>
-        <input type="text"
-               name="user_ids[1]"
-               data-endpoint="POSTapi-v1-posts"
-               data-component="body" hidden>
-    <br>
-
-        </p>
-        </form>
-
-            <h2 id="endpoints-PUTapi-v1-posts--id-">Update the specified resource in storage.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-PUTapi-v1-posts--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://REST_APP.test/api/v1/posts/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://REST_APP.test/api/v1/posts/1"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "PUT",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-PUTapi-v1-posts--id-">
-</span>
-<span id="execution-results-PUTapi-v1-posts--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-PUTapi-v1-posts--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-v1-posts--id-"></code></pre>
-</span>
-<span id="execution-error-PUTapi-v1-posts--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-v1-posts--id-"></code></pre>
-</span>
-<form id="form-PUTapi-v1-posts--id-" data-method="PUT"
-      data-path="api/v1/posts/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-v1-posts--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-v1-posts--id-"
-                    onclick="tryItOut('PUTapi-v1-posts--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-v1-posts--id-"
-                    onclick="cancelTryOut('PUTapi-v1-posts--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-v1-posts--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/v1/posts/{id}</code></b>
-        </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="PUTapi-v1-posts--id-"
-               value="1"
-               data-component="url" hidden>
-    <br>
-<p>The ID of the post.</p>
-            </p>
-                    </form>
-
-            <h2 id="endpoints-DELETEapi-v1-posts--post_id-">Remove the specified resource from storage.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-DELETEapi-v1-posts--post_id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://REST_APP.test/api/v1/posts/1" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://REST_APP.test/api/v1/posts/1"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "DELETE",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-DELETEapi-v1-posts--post_id-">
-</span>
-<span id="execution-results-DELETEapi-v1-posts--post_id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-DELETEapi-v1-posts--post_id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-v1-posts--post_id-"></code></pre>
-</span>
-<span id="execution-error-DELETEapi-v1-posts--post_id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-v1-posts--post_id-"></code></pre>
-</span>
-<form id="form-DELETEapi-v1-posts--post_id-" data-method="DELETE"
-      data-path="api/v1/posts/{post_id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-v1-posts--post_id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-v1-posts--post_id-"
-                    onclick="tryItOut('DELETEapi-v1-posts--post_id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-v1-posts--post_id-"
-                    onclick="cancelTryOut('DELETEapi-v1-posts--post_id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-v1-posts--post_id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-red">DELETE</small>
-            <b><code>api/v1/posts/{post_id}</code></b>
-        </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>post_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="post_id"
-               data-endpoint="DELETEapi-v1-posts--post_id-"
-               value="1"
-               data-component="url" hidden>
-    <br>
-<p>The ID of the post.</p>
-            </p>
-                    </form>
-
             <h2 id="endpoints-GETapi-v1-comments">Display a listing of the resource.</h2>
 
 <p>
@@ -1487,14 +798,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://REST_APP.test/api/v1/comments/18" \
+    --get "http://REST_APP.test/api/v1/comments/9" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://REST_APP.test/api/v1/comments/18"
+    "http://REST_APP.test/api/v1/comments/9"
 );
 
 const headers = {
@@ -1986,7 +1297,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="GETapi-v1-comments--id-"
-               value="18"
+               value="9"
                data-component="url" hidden>
     <br>
 <p>The ID of the comment.</p>
@@ -2084,14 +1395,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PATCH \
-    "http://REST_APP.test/api/v1/comments/20" \
+    "http://REST_APP.test/api/v1/comments/14" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://REST_APP.test/api/v1/comments/20"
+    "http://REST_APP.test/api/v1/comments/14"
 );
 
 const headers = {
@@ -2153,7 +1464,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PATCHapi-v1-comments--id-"
-               value="20"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The ID of the comment.</p>
@@ -2253,6 +1564,663 @@ access-control-allow-origin: *
             <small class="badge badge-green">GET</small>
             <b><code>api/user</code></b>
         </p>
+                    </form>
+
+        <h1 id="posts-management">Posts Management</h1>
+
+    <p>APIs to manage the Posts Resource</p>
+
+            <h2 id="posts-management-GETapi-v1-posts">Display a list of posts</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-posts">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://REST_APP.test/api/v1/posts?page_size=2&amp;?page==16" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://REST_APP.test/api/v1/posts"
+);
+
+const params = {
+    "page_size": "2",
+    "?page=": "16",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-posts">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 57
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;title&quot;: &quot;eligendi&quot;,
+            &quot;body&quot;: [],
+            &quot;created_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;title&quot;: &quot;voluptate&quot;,
+            &quot;body&quot;: [],
+            &quot;created_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://rest_app.test/api/v1/posts?page=1&quot;,
+        &quot;last&quot;: &quot;http://rest_app.test/api/v1/posts?page=20&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: &quot;http://rest_app.test/api/v1/posts?page=2&quot;
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 20,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=4&quot;,
+                &quot;label&quot;: &quot;4&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=5&quot;,
+                &quot;label&quot;: &quot;5&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=6&quot;,
+                &quot;label&quot;: &quot;6&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=7&quot;,
+                &quot;label&quot;: &quot;7&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=8&quot;,
+                &quot;label&quot;: &quot;8&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=9&quot;,
+                &quot;label&quot;: &quot;9&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=10&quot;,
+                &quot;label&quot;: &quot;10&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;...&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=19&quot;,
+                &quot;label&quot;: &quot;19&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=20&quot;,
+                &quot;label&quot;: &quot;20&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://rest_app.test/api/v1/posts?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://rest_app.test/api/v1/posts&quot;,
+        &quot;per_page&quot;: 2,
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 40
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-posts" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-posts"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-posts"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-posts" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-posts"></code></pre>
+</span>
+<form id="form-GETapi-v1-posts" data-method="GET"
+      data-path="api/v1/posts"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-posts', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-posts"
+                    onclick="tryItOut('GETapi-v1-posts');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-posts"
+                    onclick="cancelTryOut('GETapi-v1-posts');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-posts" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/posts</code></b>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                    <p>
+                <b><code>page_size</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="page_size"
+               data-endpoint="GETapi-v1-posts"
+               value="2"
+               data-component="query" hidden>
+    <br>
+<p>size per page. Default is '20'. Example 20.</p>
+            </p>
+                    <p>
+                <b><code>?page=</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="?page="
+               data-endpoint="GETapi-v1-posts"
+               value="16"
+               data-component="query" hidden>
+    <br>
+<p>page to view. Example 1.</p>
+            </p>
+                </form>
+
+            <h2 id="posts-management-GETapi-v1-posts--id-">Display the specified resource.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-posts--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://REST_APP.test/api/v1/posts/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://REST_APP.test/api/v1/posts/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-posts--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 56
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;title&quot;: &quot;eligendi&quot;,
+        &quot;body&quot;: [],
+        &quot;created_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-07-12T10:42:38.000000Z&quot;
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-posts--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-posts--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-posts--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-posts--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-posts--id-"></code></pre>
+</span>
+<form id="form-GETapi-v1-posts--id-" data-method="GET"
+      data-path="api/v1/posts/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-posts--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-posts--id-"
+                    onclick="tryItOut('GETapi-v1-posts--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-posts--id-"
+                    onclick="cancelTryOut('GETapi-v1-posts--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-posts--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/posts/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-v1-posts--id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the post.</p>
+            </p>
+                    </form>
+
+            <h2 id="posts-management-POSTapi-v1-posts">Store a newly created resource in storage.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-v1-posts">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://REST_APP.test/api/v1/posts" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"title\": \"dul\",
+    \"body\": \"accusantium\",
+    \"user_ids\": [
+        \"accusantium\"
+    ]
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://REST_APP.test/api/v1/posts"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "title": "dul",
+    "body": "accusantium",
+    "user_ids": [
+        "accusantium"
+    ]
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-posts">
+</span>
+<span id="execution-results-POSTapi-v1-posts" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-posts"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-posts"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-posts" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-posts"></code></pre>
+</span>
+<form id="form-POSTapi-v1-posts" data-method="POST"
+      data-path="api/v1/posts"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-posts', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-posts"
+                    onclick="tryItOut('POSTapi-v1-posts');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-posts"
+                    onclick="cancelTryOut('POSTapi-v1-posts');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-posts" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/posts</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>title</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="title"
+               data-endpoint="POSTapi-v1-posts"
+               value="dul"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 5 characters.</p>
+        </p>
+                <p>
+            <b><code>body</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="body"
+               data-endpoint="POSTapi-v1-posts"
+               value="accusantium"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>user_ids</code></b>&nbsp;&nbsp;<small>string[]</small>  &nbsp;
+                <input type="text"
+               name="user_ids[0]"
+               data-endpoint="POSTapi-v1-posts"
+               data-component="body" hidden>
+        <input type="text"
+               name="user_ids[1]"
+               data-endpoint="POSTapi-v1-posts"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+        </form>
+
+            <h2 id="posts-management-PUTapi-v1-posts--id-">Update the specified resource in storage.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-PUTapi-v1-posts--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://REST_APP.test/api/v1/posts/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://REST_APP.test/api/v1/posts/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-v1-posts--id-">
+</span>
+<span id="execution-results-PUTapi-v1-posts--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-v1-posts--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-v1-posts--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-v1-posts--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-v1-posts--id-"></code></pre>
+</span>
+<form id="form-PUTapi-v1-posts--id-" data-method="PUT"
+      data-path="api/v1/posts/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-v1-posts--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-v1-posts--id-"
+                    onclick="tryItOut('PUTapi-v1-posts--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-v1-posts--id-"
+                    onclick="cancelTryOut('PUTapi-v1-posts--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-v1-posts--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/v1/posts/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-v1-posts--id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the post.</p>
+            </p>
+                    </form>
+
+            <h2 id="posts-management-DELETEapi-v1-posts--post_id-">Remove the specified resource from storage.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-v1-posts--post_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://REST_APP.test/api/v1/posts/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://REST_APP.test/api/v1/posts/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-v1-posts--post_id-">
+</span>
+<span id="execution-results-DELETEapi-v1-posts--post_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-v1-posts--post_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-v1-posts--post_id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-v1-posts--post_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-v1-posts--post_id-"></code></pre>
+</span>
+<form id="form-DELETEapi-v1-posts--post_id-" data-method="DELETE"
+      data-path="api/v1/posts/{post_id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-v1-posts--post_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-v1-posts--post_id-"
+                    onclick="tryItOut('DELETEapi-v1-posts--post_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-v1-posts--post_id-"
+                    onclick="cancelTryOut('DELETEapi-v1-posts--post_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-v1-posts--post_id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/v1/posts/{post_id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>post_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="post_id"
+               data-endpoint="DELETEapi-v1-posts--post_id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the post.</p>
+            </p>
                     </form>
 
     

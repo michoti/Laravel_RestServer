@@ -14,8 +14,27 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
+
+/**
+ * 
+ * 
+ * @group Posts Management
+ * APIs to manage the Posts Resource
+ * 
+ * 
+ */
+
+
 class PostController extends Controller
 {
+
+    /**
+     * 
+     * Display a list of posts
+     * 
+     * @queryParam page_size int size per page. Default is '20'. Example 20.
+     * @queryParam ?page= int page to view. Example 1.
+     */
 
     public function index(Request $request)
     {
