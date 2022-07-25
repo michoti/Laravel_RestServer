@@ -1,0 +1,1648 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://REST_APP.test'
+paths:
+  /api/v1/users:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      name: 'Prof. Kayley Mitchell'
+                      email: zmarks@example.com
+                      created_at: '2022-07-09T18:05:49.000000Z'
+                      updated_at: '2022-07-09T18:05:49.000000Z'
+                    -
+                      name: 'Gerard Windler'
+                      email: rebeca89@example.net
+                      created_at: '2022-07-09T18:05:49.000000Z'
+                      updated_at: '2022-07-09T18:05:49.000000Z'
+                    -
+                      name: michoti
+                      email: michoti@example.com
+                      created_at: '2022-07-09T18:05:49.000000Z'
+                      updated_at: '2022-07-12T07:53:42.000000Z'
+                    -
+                      name: 'wesley okwara'
+                      email: wesleyOkwara@example.com
+                      created_at: '2022-07-18T17:42:17.000000Z'
+                      updated_at: '2022-07-18T17:42:17.000000Z'
+                    -
+                      name: 'Mother michael'
+                      email: testmichael@exampemail.com
+                      created_at: '2022-07-18T18:18:55.000000Z'
+                      updated_at: '2022-07-18T18:18:55.000000Z'
+                  links:
+                    first: 'http://rest_app.test/api/v1/users?page=1'
+                    last: 'http://rest_app.test/api/v1/users?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://rest_app.test/api/v1/users?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://rest_app.test/api/v1/users'
+                    per_page: 20
+                    to: 5
+                    total: 5
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        name: 'Prof. Kayley Mitchell'
+                        email: zmarks@example.com
+                        created_at: '2022-07-09T18:05:49.000000Z'
+                        updated_at: '2022-07-09T18:05:49.000000Z'
+                      -
+                        name: 'Gerard Windler'
+                        email: rebeca89@example.net
+                        created_at: '2022-07-09T18:05:49.000000Z'
+                        updated_at: '2022-07-09T18:05:49.000000Z'
+                      -
+                        name: michoti
+                        email: michoti@example.com
+                        created_at: '2022-07-09T18:05:49.000000Z'
+                        updated_at: '2022-07-12T07:53:42.000000Z'
+                      -
+                        name: 'wesley okwara'
+                        email: wesleyOkwara@example.com
+                        created_at: '2022-07-18T17:42:17.000000Z'
+                        updated_at: '2022-07-18T17:42:17.000000Z'
+                      -
+                        name: 'Mother michael'
+                        email: testmichael@exampemail.com
+                        created_at: '2022-07-18T18:18:55.000000Z'
+                        updated_at: '2022-07-18T18:18:55.000000Z'
+                    items:
+                      type: object
+                  links:
+                    type: object
+                    example:
+                      first: 'http://rest_app.test/api/v1/users?page=1'
+                      last: 'http://rest_app.test/api/v1/users?page=1'
+                      prev: null
+                      next: null
+                  meta:
+                    type: object
+                    example:
+                      current_page: 1
+                      from: 1
+                      last_page: 1
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://rest_app.test/api/v1/users?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      path: 'http://rest_app.test/api/v1/users'
+                      per_page: 20
+                      to: 5
+                      total: 5
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/v1/users/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    name: 'Prof. Kayley Mitchell'
+                    email: zmarks@example.com
+                    created_at: '2022-07-09T18:05:49.000000Z'
+                    updated_at: '2022-07-09T18:05:49.000000Z'
+                properties:
+                  data:
+                    type: object
+                    example:
+                      name: 'Prof. Kayley Mitchell'
+                      email: zmarks@example.com
+                      created_at: '2022-07-09T18:05:49.000000Z'
+                      updated_at: '2022-07-09T18:05:49.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/users/{user_id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/posts:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      title: eligendi
+                      body: []
+                      created_at: '2022-07-12T10:42:38.000000Z'
+                      updated_at: '2022-07-12T10:42:38.000000Z'
+                    -
+                      id: 2
+                      title: voluptate
+                      body: []
+                      created_at: '2022-07-12T10:42:38.000000Z'
+                      updated_at: '2022-07-12T10:42:38.000000Z'
+                    -
+                      id: 3
+                      title: nihil
+                      body: []
+                      created_at: '2022-07-12T10:42:38.000000Z'
+                      updated_at: '2022-07-12T10:42:38.000000Z'
+                    -
+                      id: 4
+                      title: ut
+                      body: []
+                      created_at: '2022-07-12T10:42:38.000000Z'
+                      updated_at: '2022-07-12T10:42:38.000000Z'
+                    -
+                      id: 5
+                      title: atque
+                      body: []
+                      created_at: '2022-07-12T10:42:38.000000Z'
+                      updated_at: '2022-07-12T10:42:38.000000Z'
+                    -
+                      id: 6
+                      title: non
+                      body: []
+                      created_at: '2022-07-12T10:42:38.000000Z'
+                      updated_at: '2022-07-12T10:42:38.000000Z'
+                    -
+                      id: 7
+                      title: 'transaction title update test'
+                      body: []
+                      created_at: '2022-07-12T10:42:39.000000Z'
+                      updated_at: '2022-07-12T13:33:02.000000Z'
+                    -
+                      id: 8
+                      title: labore
+                      body: []
+                      created_at: '2022-07-12T10:42:39.000000Z'
+                      updated_at: '2022-07-12T10:42:39.000000Z'
+                    -
+                      id: 9
+                      title: sequi
+                      body: []
+                      created_at: '2022-07-12T10:42:39.000000Z'
+                      updated_at: '2022-07-12T10:42:39.000000Z'
+                    -
+                      id: 10
+                      title: quia
+                      body: []
+                      created_at: '2022-07-12T10:42:39.000000Z'
+                      updated_at: '2022-07-12T10:42:39.000000Z'
+                    -
+                      id: 11
+                      title: ipsa
+                      body: []
+                      created_at: '2022-07-12T10:42:39.000000Z'
+                      updated_at: '2022-07-12T10:42:39.000000Z'
+                    -
+                      id: 12
+                      title: voluptas
+                      body: []
+                      created_at: '2022-07-12T10:42:39.000000Z'
+                      updated_at: '2022-07-12T10:42:39.000000Z'
+                    -
+                      id: 13
+                      title: laboriosam
+                      body: []
+                      created_at: '2022-07-12T10:42:39.000000Z'
+                      updated_at: '2022-07-12T10:42:39.000000Z'
+                    -
+                      id: 14
+                      title: pariatur
+                      body: []
+                      created_at: '2022-07-12T10:42:39.000000Z'
+                      updated_at: '2022-07-12T10:42:39.000000Z'
+                    -
+                      id: 16
+                      title: 'transaction title two'
+                      body: []
+                      created_at: '2022-07-12T11:13:25.000000Z'
+                      updated_at: '2022-07-12T11:13:25.000000Z'
+                    -
+                      id: 17
+                      title: 'transaction title two'
+                      body: []
+                      created_at: '2022-07-12T11:14:15.000000Z'
+                      updated_at: '2022-07-12T11:14:15.000000Z'
+                    -
+                      id: 18
+                      title: 'transaction title two'
+                      body: []
+                      created_at: '2022-07-12T11:17:59.000000Z'
+                      updated_at: '2022-07-12T11:17:59.000000Z'
+                    -
+                      id: 19
+                      title: 'transaction title two'
+                      body: []
+                      created_at: '2022-07-12T11:20:13.000000Z'
+                      updated_at: '2022-07-12T11:20:13.000000Z'
+                    -
+                      id: 20
+                      title: 'transaction title two'
+                      body: []
+                      created_at: '2022-07-12T11:20:39.000000Z'
+                      updated_at: '2022-07-12T11:20:39.000000Z'
+                    -
+                      id: 21
+                      title: 'transaction title three'
+                      body: []
+                      created_at: '2022-07-12T11:24:40.000000Z'
+                      updated_at: '2022-07-12T11:24:40.000000Z'
+                  links:
+                    first: 'http://rest_app.test/api/v1/posts?page=1'
+                    last: 'http://rest_app.test/api/v1/posts?page=2'
+                    prev: null
+                    next: 'http://rest_app.test/api/v1/posts?page=2'
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 2
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://rest_app.test/api/v1/posts?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://rest_app.test/api/v1/posts?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://rest_app.test/api/v1/posts?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://rest_app.test/api/v1/posts'
+                    per_page: 20
+                    to: 20
+                    total: 40
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: eligendi
+                        body: []
+                        created_at: '2022-07-12T10:42:38.000000Z'
+                        updated_at: '2022-07-12T10:42:38.000000Z'
+                      -
+                        id: 2
+                        title: voluptate
+                        body: []
+                        created_at: '2022-07-12T10:42:38.000000Z'
+                        updated_at: '2022-07-12T10:42:38.000000Z'
+                      -
+                        id: 3
+                        title: nihil
+                        body: []
+                        created_at: '2022-07-12T10:42:38.000000Z'
+                        updated_at: '2022-07-12T10:42:38.000000Z'
+                      -
+                        id: 4
+                        title: ut
+                        body: []
+                        created_at: '2022-07-12T10:42:38.000000Z'
+                        updated_at: '2022-07-12T10:42:38.000000Z'
+                      -
+                        id: 5
+                        title: atque
+                        body: []
+                        created_at: '2022-07-12T10:42:38.000000Z'
+                        updated_at: '2022-07-12T10:42:38.000000Z'
+                      -
+                        id: 6
+                        title: non
+                        body: []
+                        created_at: '2022-07-12T10:42:38.000000Z'
+                        updated_at: '2022-07-12T10:42:38.000000Z'
+                      -
+                        id: 7
+                        title: 'transaction title update test'
+                        body: []
+                        created_at: '2022-07-12T10:42:39.000000Z'
+                        updated_at: '2022-07-12T13:33:02.000000Z'
+                      -
+                        id: 8
+                        title: labore
+                        body: []
+                        created_at: '2022-07-12T10:42:39.000000Z'
+                        updated_at: '2022-07-12T10:42:39.000000Z'
+                      -
+                        id: 9
+                        title: sequi
+                        body: []
+                        created_at: '2022-07-12T10:42:39.000000Z'
+                        updated_at: '2022-07-12T10:42:39.000000Z'
+                      -
+                        id: 10
+                        title: quia
+                        body: []
+                        created_at: '2022-07-12T10:42:39.000000Z'
+                        updated_at: '2022-07-12T10:42:39.000000Z'
+                      -
+                        id: 11
+                        title: ipsa
+                        body: []
+                        created_at: '2022-07-12T10:42:39.000000Z'
+                        updated_at: '2022-07-12T10:42:39.000000Z'
+                      -
+                        id: 12
+                        title: voluptas
+                        body: []
+                        created_at: '2022-07-12T10:42:39.000000Z'
+                        updated_at: '2022-07-12T10:42:39.000000Z'
+                      -
+                        id: 13
+                        title: laboriosam
+                        body: []
+                        created_at: '2022-07-12T10:42:39.000000Z'
+                        updated_at: '2022-07-12T10:42:39.000000Z'
+                      -
+                        id: 14
+                        title: pariatur
+                        body: []
+                        created_at: '2022-07-12T10:42:39.000000Z'
+                        updated_at: '2022-07-12T10:42:39.000000Z'
+                      -
+                        id: 16
+                        title: 'transaction title two'
+                        body: []
+                        created_at: '2022-07-12T11:13:25.000000Z'
+                        updated_at: '2022-07-12T11:13:25.000000Z'
+                      -
+                        id: 17
+                        title: 'transaction title two'
+                        body: []
+                        created_at: '2022-07-12T11:14:15.000000Z'
+                        updated_at: '2022-07-12T11:14:15.000000Z'
+                      -
+                        id: 18
+                        title: 'transaction title two'
+                        body: []
+                        created_at: '2022-07-12T11:17:59.000000Z'
+                        updated_at: '2022-07-12T11:17:59.000000Z'
+                      -
+                        id: 19
+                        title: 'transaction title two'
+                        body: []
+                        created_at: '2022-07-12T11:20:13.000000Z'
+                        updated_at: '2022-07-12T11:20:13.000000Z'
+                      -
+                        id: 20
+                        title: 'transaction title two'
+                        body: []
+                        created_at: '2022-07-12T11:20:39.000000Z'
+                        updated_at: '2022-07-12T11:20:39.000000Z'
+                      -
+                        id: 21
+                        title: 'transaction title three'
+                        body: []
+                        created_at: '2022-07-12T11:24:40.000000Z'
+                        updated_at: '2022-07-12T11:24:40.000000Z'
+                    items:
+                      type: object
+                  links:
+                    type: object
+                    example:
+                      first: 'http://rest_app.test/api/v1/posts?page=1'
+                      last: 'http://rest_app.test/api/v1/posts?page=2'
+                      prev: null
+                      next: 'http://rest_app.test/api/v1/posts?page=2'
+                  meta:
+                    type: object
+                    example:
+                      current_page: 1
+                      from: 1
+                      last_page: 2
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://rest_app.test/api/v1/posts?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: 'http://rest_app.test/api/v1/posts?page=2'
+                          label: '2'
+                          active: false
+                        -
+                          url: 'http://rest_app.test/api/v1/posts?page=2'
+                          label: 'Next &raquo;'
+                          active: false
+                      path: 'http://rest_app.test/api/v1/posts'
+                      per_page: 20
+                      to: 20
+                      total: 40
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must be at least 5 characters.'
+                  example: s
+                body:
+                  type: string
+                  description: ''
+                  example: itaque
+                user_ids:
+                  type: array
+                  description: ''
+                  example:
+                    - eaque
+                  items:
+                    type: string
+              required:
+                - title
+                - body
+                - user_ids
+      security: []
+  '/api/v1/posts/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    title: eligendi
+                    body: []
+                    created_at: '2022-07-12T10:42:38.000000Z'
+                    updated_at: '2022-07-12T10:42:38.000000Z'
+                properties:
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      title: eligendi
+                      body: []
+                      created_at: '2022-07-12T10:42:38.000000Z'
+                      updated_at: '2022-07-12T10:42:38.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/posts/{post_id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/comments:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/v1/comments/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'No query results for model [App\Models\Comment] 1'
+                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                  line: 377
+                  trace:
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                      line: 353
+                      function: prepareException
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\nunomaduro\collision\src\Adapters\Laravel\ExceptionHandler.php'
+                      line: 54
+                      function: render
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php'
+                      line: 51
+                      function: render
+                      class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 185
+                      function: handleException
+                      class: Illuminate\Routing\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 126
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 102
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 54
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 726
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 703
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 667
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 656
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                      line: 167
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 141
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
+                      line: 86
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                      line: 142
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                      line: 111
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                      line: 299
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                      line: 287
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                      line: 89
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                      line: 45
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                      line: 222
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                      line: 179
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                      line: 116
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                      line: 123
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                      line: 80
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                      line: 56
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php'
+                      line: 55
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Container\Util.php'
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                      line: 37
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Container\Container.php'
+                      line: 651
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Console\Command.php'
+                      line: 136
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\symfony\console\Command\Command.php'
+                      line: 291
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Console\Command.php'
+                      line: 121
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\symfony\console\Application.php'
+                      line: 998
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\symfony\console\Application.php'
+                      line: 299
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\symfony\console\Application.php'
+                      line: 171
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Console\Application.php'
+                      line: 102
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
+                      line: 129
+                      function: run
+                      class: Illuminate\Console\Application
+                      type: '->'
+                    -
+                      file: 'C:\xampp\htdocs\REST_APP\artisan'
+                      line: 37
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
+                properties:
+                  message:
+                    type: string
+                    example: 'No query results for model [App\Models\Comment] 1'
+                  exception:
+                    type: string
+                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file:
+                    type: string
+                    example: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                  line:
+                    type: integer
+                    example: 377
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                        line: 353
+                        function: prepareException
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\nunomaduro\collision\src\Adapters\Laravel\ExceptionHandler.php'
+                        line: 54
+                        function: render
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php'
+                        line: 51
+                        function: render
+                        class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 185
+                        function: handleException
+                        class: Illuminate\Routing\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 126
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 102
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 54
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 726
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 703
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 667
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 656
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                        line: 167
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 141
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
+                        line: 86
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                        line: 142
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                        line: 111
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                        line: 299
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                        line: 287
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                        line: 89
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                        line: 45
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                        line: 222
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                        line: 179
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
+                        line: 116
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                        line: 123
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                        line: 80
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
+                        line: 56
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php'
+                        line: 55
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Container\Util.php'
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
+                        line: 37
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Container\Container.php'
+                        line: 651
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Console\Command.php'
+                        line: 136
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\symfony\console\Command\Command.php'
+                        line: 291
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Console\Command.php'
+                        line: 121
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\symfony\console\Application.php'
+                        line: 998
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\symfony\console\Application.php'
+                        line: 299
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\symfony\console\Application.php'
+                        line: 171
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Console\Application.php'
+                        line: 102
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
+                        line: 129
+                        function: run
+                        class: Illuminate\Console\Application
+                        type: '->'
+                      -
+                        file: 'C:\xampp\htdocs\REST_APP\artisan'
+                        line: 37
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                    items:
+                      type: object
+      tags:
+        - Endpoints
+      security: []
+    patch:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the comment.'
+        example: 18
+        required: true
+        schema:
+          type: integer
+  /api/user:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
