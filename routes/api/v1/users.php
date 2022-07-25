@@ -6,7 +6,7 @@ use App\Http\Controllers\UserController;
 
 
 
-Route::middleware('api')
+Route::middleware(['auth:api',])
     ->name('users.')
     ->group(function (){
 
