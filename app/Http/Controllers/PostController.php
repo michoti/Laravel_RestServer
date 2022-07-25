@@ -91,6 +91,8 @@ class PostController extends Controller
 
     /**
      * Display the specified resource.
+     * 
+     * @urlParam id int required 
      *
      * @param  \App\Models\Post  $post
      * @return \App\Http\Resources\PostResource
