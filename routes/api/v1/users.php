@@ -6,11 +6,10 @@ use App\Http\Controllers\UserController;
 
 
 
-Route::middleware(['auth:api',])
-    ->name('users.')
+Route::name('users.')
     ->group(function (){
 
-    Route::get('/users', [UserController::class, 'index'])->name('index')->withoutMiddleware('auth');
+    Route::get('/users', [UserController::class, 'index'])->name('index');
 
     Route::get('/users/{user}', [UserController::class, 'show'])->name('show')->whereNumber('user');
 
