@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::
-    name('comments.')
+Route::middleware('api')
+    ->name('comments.')
     ->group(function (){
 
     Route::get('/comments', [CommentController::class, 'index'])->name('index')->withoutMiddleware('auth');

@@ -6,8 +6,8 @@ use App\Http\Controllers\UserController;
 
 
 
-Route::
-    name('users.')
+Route::middleware('api')
+    ->name('users.')
     ->group(function (){
 
     Route::get('/users', [UserController::class, 'index'])->name('index')->withoutMiddleware('auth');
