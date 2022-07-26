@@ -6,6 +6,15 @@ use App\Models\Comment;
 use App\Http\Requests\StoreCommentRequest;
 use App\Http\Requests\UpdateCommentRequest;
 
+/**
+ * 
+ * 
+ * @group Comments Management
+ * APIs to manage the Posts Resource
+ * 
+ * 
+ */
+
 class CommentController extends Controller
 {
     /**

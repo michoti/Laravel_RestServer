@@ -8,6 +8,15 @@ use App\Repositories\UserRepository;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
+/**
+ * 
+ * 
+ * @group Users Management
+ * APIs to manage the Posts Resource
+ * 
+ * 
+ */
+
 class UserController extends Controller
 {
     /**

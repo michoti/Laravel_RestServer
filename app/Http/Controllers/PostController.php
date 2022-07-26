@@ -53,7 +53,11 @@ class PostController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created post in storage.
+     * 
+     * @bodyParam title string required
+     * @bodyParam body string required
+     * @bodyParam user_ids integer required
      *
      * @param  \App\Http\Requests\StorePostRequest  $request
      * @return \App\Http\Resources\PostResource
@@ -103,7 +107,9 @@ class PostController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified post in storage.
+     * 
+     * @urlParam id int required
      *
      * @param  \App\Http\Requests\UpdatePostRequest  $request
      * @param  \App\Models\Post  $post
@@ -122,6 +128,8 @@ class PostController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * 
+     * @urlParam id int required
      *
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\JsonResponse
