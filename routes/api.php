@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::middleware('auth')     
+Route::middleware(['auth:sanctum'])     
     ->prefix('v1')
     ->group(function(){
         
