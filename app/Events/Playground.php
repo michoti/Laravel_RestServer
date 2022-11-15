@@ -31,6 +31,11 @@ class Playground implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('playground.public.1');
+        return new Channel('public.playground.1');
+    }
+
+    public function broadcastAs()
+    {
+        return 'playground';
     }
 }

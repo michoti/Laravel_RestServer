@@ -1,6 +1,6 @@
 <?php
 
-use App\Events\Playground;
+// use App\Events\Playground;
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
@@ -48,6 +48,6 @@ if(App::environment('local'))
 }
 
 Route::get('/playground', function(){
-    event(new Playground);
+    event(new \App\Events\Playground());
     return null;
 });
